@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Randimize Screen Clicker'
+  Caption = 'Randomize Screen Clicker'
   ClientHeight = 272
   ClientWidth = 408
   Color = clBtnFace
@@ -16,21 +16,13 @@ object Form1: TForm1
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object GroupBox1: TGroupBox
-    Left = 8
-    Top = 8
-    Width = 193
-    Height = 217
-    Caption = #1056#1077#1078#1080#1084' '#1088#1072#1073#1086#1090#1099
-    TabOrder = 0
-  end
   object StartButton: TButton
     Left = 8
     Top = 231
     Width = 70
     Height = 33
     Caption = #1057#1090#1072#1088#1090
-    TabOrder = 1
+    TabOrder = 0
   end
   object StopButton: TButton
     Left = 84
@@ -38,7 +30,7 @@ object Form1: TForm1
     Width = 70
     Height = 33
     Caption = #1057#1090#1086#1087
-    TabOrder = 2
+    TabOrder = 1
   end
   object GroupBox2: TGroupBox
     Left = 207
@@ -46,7 +38,74 @@ object Form1: TForm1
     Width = 193
     Height = 256
     Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1088#1072#1085#1076#1086#1084#1080#1079#1072#1094#1080#1080
-    TabOrder = 3
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 11
+      Top = 16
+      Width = 78
+      Height = 13
+      Caption = #1048#1085#1090#1077#1088#1074#1072#1083' ('#1084#1080#1085')'
+    end
+    object Label2: TLabel
+      Left = 12
+      Top = 62
+      Width = 77
+      Height = 13
+      Caption = #1056#1072#1079#1073#1088#1086#1089' ('#1087#1080#1082#1089') '
+    end
+    object Edit1: TEdit
+      Left = 11
+      Top = 35
+      Width = 78
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 0
+      Text = '1000'
+    end
+    object RadioGroup2: TRadioGroup
+      Left = 95
+      Top = 16
+      Width = 95
+      Height = 86
+      Caption = #1056#1072#1079#1073#1088#1086#1089
+      TabOrder = 1
+    end
+    object RadioButton1: TRadioButton
+      Left = 104
+      Top = 37
+      Width = 113
+      Height = 17
+      Caption = #1055#1080#1082#1089#1077#1083#1080
+      TabOrder = 2
+    end
+    object RadioButton2: TRadioButton
+      Left = 104
+      Top = 60
+      Width = 113
+      Height = 17
+      Caption = #1042#1077#1089#1100' '#1101#1082#1088#1072#1085
+      Checked = True
+      TabOrder = 3
+      TabStop = True
+    end
+    object Edit2: TEdit
+      Left = 11
+      Top = 81
+      Width = 78
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 4
+      Text = '100'
+    end
+    object CheckBox1: TCheckBox
+      AlignWithMargins = True
+      Left = 11
+      Top = 108
+      Width = 166
+      Height = 17
+      Caption = #1057#1083#1091#1095#1072#1081#1085#1099#1081' '#1080#1085#1090#1077#1088#1074#1072#1083
+      TabOrder = 5
+    end
   end
   object BitBtn1: TBitBtn
     Left = 162
@@ -130,6 +189,14 @@ object Form1: TForm1
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEFDFDFCF6EEE4EFDDC5EDDEC1EFE1C0
       EFE3C1EFE1C0EEDFC4F5ECDEFDFBFBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFF}
+    TabOrder = 3
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 8
+    Top = 8
+    Width = 193
+    Height = 217
+    Caption = #1056#1077#1078#1080#1084' '#1088#1072#1073#1086#1090#1099
     TabOrder = 4
   end
 end

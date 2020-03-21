@@ -53,7 +53,7 @@ object Form1: TForm1
       Height = 13
       Caption = #1056#1072#1079#1073#1088#1086#1089' ('#1087#1080#1082#1089') '
     end
-    object Edit1: TEdit
+    object IntervalEdit: TEdit
       Left = 11
       Top = 35
       Width = 78
@@ -70,7 +70,7 @@ object Form1: TForm1
       Caption = #1056#1072#1079#1073#1088#1086#1089
       TabOrder = 1
     end
-    object RadioButton1: TRadioButton
+    object RadioPixels: TRadioButton
       Left = 104
       Top = 37
       Width = 113
@@ -78,7 +78,7 @@ object Form1: TForm1
       Caption = #1055#1080#1082#1089#1077#1083#1080
       TabOrder = 2
     end
-    object RadioButton2: TRadioButton
+    object RadioScreen: TRadioButton
       Left = 104
       Top = 60
       Width = 113
@@ -88,7 +88,7 @@ object Form1: TForm1
       TabOrder = 3
       TabStop = True
     end
-    object Edit2: TEdit
+    object PosotionInterval: TEdit
       Left = 11
       Top = 81
       Width = 78
@@ -97,7 +97,7 @@ object Form1: TForm1
       TabOrder = 4
       Text = '100'
     end
-    object CheckBox1: TCheckBox
+    object RandomIntervalCheck: TCheckBox
       AlignWithMargins = True
       Left = 11
       Top = 108
@@ -107,7 +107,7 @@ object Form1: TForm1
       TabOrder = 5
     end
   end
-  object BitBtn1: TBitBtn
+  object HelpButton: TBitBtn
     Left = 162
     Top = 231
     Width = 39
@@ -195,8 +195,44 @@ object Form1: TForm1
     Left = 8
     Top = 8
     Width = 193
-    Height = 217
+    Height = 154
     Caption = #1056#1077#1078#1080#1084' '#1088#1072#1073#1086#1090#1099
     TabOrder = 4
+  end
+  object RadioGroup3: TRadioGroup
+    Left = 104
+    Top = 136
+    Width = 1
+    Height = 49
+    Caption = 'RadioGroup3'
+    TabOrder = 5
+  end
+  object RadioGroup4: TRadioGroup
+    Left = 8
+    Top = 168
+    Width = 193
+    Height = 57
+    Caption = #1042#1088#1077#1084#1103' '#1088#1072#1073#1086#1090#1099
+    TabOrder = 6
+  end
+  object TimeEdit: TEdit
+    Left = 16
+    Top = 191
+    Width = 62
+    Height = 21
+    TabOrder = 7
+    Text = '20'
+  end
+  object ComboBox1: TComboBox
+    Left = 84
+    Top = 191
+    Width = 117
+    Height = 21
+    TabOrder = 8
+    Text = #1052#1080#1085
+    Items.Strings = (
+      #1052#1080#1085
+      #1057#1077#1082
+      #1063#1072#1089)
   end
 end

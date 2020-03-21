@@ -11,16 +11,20 @@ type
     StartButton: TButton;
     StopButton: TButton;
     GroupBox2: TGroupBox;
-    BitBtn1: TBitBtn;
+    HelpButton: TBitBtn;
     Label1: TLabel;
     RadioGroup1: TRadioGroup;
-    Edit1: TEdit;
+    IntervalEdit: TEdit;
     RadioGroup2: TRadioGroup;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
+    RadioPixels: TRadioButton;
+    RadioScreen: TRadioButton;
     Label2: TLabel;
-    Edit2: TEdit;
-    CheckBox1: TCheckBox;
+    PosotionInterval: TEdit;
+    RandomIntervalCheck: TCheckBox;
+    RadioGroup3: TRadioGroup;
+    RadioGroup4: TRadioGroup;
+    TimeEdit: TEdit;
+    ComboBox1: TComboBox;
   private
     { Private declarations }
   public

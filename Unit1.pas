@@ -25,6 +25,15 @@ type
     RadioGroup4: TRadioGroup;
     TimeEdit: TEdit;
     ComboBox1: TComboBox;
+    CheckBox1: TCheckBox;
+    LogMemo: TMemo;
+    GroupBox1: TGroupBox;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    WorkTimeLabel: TLabel;
+    ClickedLabel: TLabel;
+    TimeLeftLabel: TLabel;
   private
     { Private declarations }
   public

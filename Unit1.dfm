@@ -106,6 +106,108 @@ object Form1: TForm1
       Caption = #1057#1083#1091#1095#1072#1081#1085#1099#1081' '#1080#1085#1090#1077#1088#1074#1072#1083
       TabOrder = 5
     end
+    object CheckBox1: TCheckBox
+      AlignWithMargins = True
+      Left = 11
+      Top = 131
+      Width = 166
+      Height = 17
+      Caption = #1042#1082#1083#1102#1095#1080#1090#1100' "'#1047#1072#1097#1080#1090#1085#1099#1081' '#1101#1082#1088#1072#1085'"'
+      TabOrder = 6
+    end
+    object GroupBox1: TGroupBox
+      AlignWithMargins = True
+      Left = 3
+      Top = 154
+      Width = 187
+      Height = 99
+      Caption = #1057#1074#1077#1076#1077#1085#1080#1103
+      TabOrder = 7
+      object Label3: TLabel
+        Left = 11
+        Top = 22
+        Width = 105
+        Height = 16
+        Caption = #1042#1088#1077#1084#1103' '#1088#1072#1073#1086#1090#1099': '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 11
+        Top = 44
+        Width = 98
+        Height = 16
+        Caption = #1042#1089#1077#1075#1086' '#1082#1083#1080#1082#1086#1074': '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 11
+        Top = 66
+        Width = 67
+        Height = 16
+        Caption = #1054#1089#1090#1072#1083#1086#1089#1100':'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object WorkTimeLabel: TLabel
+        Left = 115
+        Top = 22
+        Width = 16
+        Height = 16
+        Caption = '15'
+        Color = clRed
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object ClickedLabel: TLabel
+        Left = 115
+        Top = 44
+        Width = 24
+        Height = 16
+        Caption = '120'
+        Color = clRed
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object TimeLeftLabel: TLabel
+        Left = 115
+        Top = 66
+        Width = 16
+        Height = 16
+        Caption = '80'
+        Color = clRed
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
   end
   object HelpButton: TBitBtn
     Left = 162
@@ -196,7 +298,7 @@ object Form1: TForm1
     Top = 8
     Width = 193
     Height = 154
-    Caption = #1056#1077#1078#1080#1084' '#1088#1072#1073#1086#1090#1099
+    Caption = #1051#1086#1075' '#1088#1072#1073#1086#1090#1099
     TabOrder = 4
   end
   object RadioGroup3: TRadioGroup
@@ -234,5 +336,13 @@ object Form1: TForm1
       #1052#1080#1085
       #1057#1077#1082
       #1063#1072#1089)
+  end
+  object LogMemo: TMemo
+    Left = 16
+    Top = 24
+    Width = 177
+    Height = 132
+    ReadOnly = True
+    TabOrder = 9
   end
 end

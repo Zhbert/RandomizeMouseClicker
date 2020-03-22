@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu]
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Randomize Screen Clicker'
   ClientHeight = 272
@@ -23,6 +23,7 @@ object Form1: TForm1
     Height = 33
     Caption = #1057#1090#1072#1088#1090
     TabOrder = 0
+    OnClick = StartButtonClick
   end
   object StopButton: TButton
     Left = 84
@@ -30,7 +31,9 @@ object Form1: TForm1
     Width = 70
     Height = 33
     Caption = #1057#1090#1086#1087
+    Enabled = False
     TabOrder = 1
+    OnClick = StopButtonClick
   end
   object GroupBox2: TGroupBox
     Left = 207
@@ -42,9 +45,9 @@ object Form1: TForm1
     object Label1: TLabel
       Left = 11
       Top = 16
-      Width = 78
+      Width = 77
       Height = 13
-      Caption = #1048#1085#1090#1077#1088#1074#1072#1083' ('#1084#1080#1085')'
+      Caption = #1048#1085#1090#1077#1088#1074#1072#1083' ('#1089#1077#1082')'
     end
     object Label2: TLabel
       Left = 12
@@ -60,7 +63,7 @@ object Form1: TForm1
       Height = 21
       NumbersOnly = True
       TabOrder = 0
-      Text = '1000'
+      Text = '10'
     end
     object RadioGroup2: TRadioGroup
       Left = 95
@@ -76,7 +79,9 @@ object Form1: TForm1
       Width = 113
       Height = 17
       Caption = #1055#1080#1082#1089#1077#1083#1080
+      Checked = True
       TabOrder = 2
+      TabStop = True
     end
     object RadioScreen: TRadioButton
       Left = 104
@@ -84,18 +89,16 @@ object Form1: TForm1
       Width = 113
       Height = 17
       Caption = #1042#1077#1089#1100' '#1101#1082#1088#1072#1085
-      Checked = True
       TabOrder = 3
-      TabStop = True
     end
-    object PosotionInterval: TEdit
+    object PositionInterval: TEdit
       Left = 11
       Top = 81
       Width = 78
       Height = 21
       NumbersOnly = True
       TabOrder = 4
-      Text = '100'
+      Text = '30'
     end
     object RandomIntervalCheck: TCheckBox
       AlignWithMargins = True
@@ -104,6 +107,7 @@ object Form1: TForm1
       Width = 166
       Height = 17
       Caption = #1057#1083#1091#1095#1072#1081#1085#1099#1081' '#1080#1085#1090#1077#1088#1074#1072#1083
+      Enabled = False
       TabOrder = 5
     end
     object CheckBox1: TCheckBox
@@ -113,6 +117,7 @@ object Form1: TForm1
       Width = 166
       Height = 17
       Caption = #1042#1082#1083#1102#1095#1080#1090#1100' "'#1047#1072#1097#1080#1090#1085#1099#1081' '#1101#1082#1088#1072#1085'"'
+      Enabled = False
       TabOrder = 6
     end
     object GroupBox1: TGroupBox
@@ -165,9 +170,9 @@ object Form1: TForm1
       object WorkTimeLabel: TLabel
         Left = 115
         Top = 22
-        Width = 16
+        Width = 8
         Height = 16
-        Caption = '15'
+        Caption = '0'
         Color = clRed
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
@@ -180,9 +185,9 @@ object Form1: TForm1
       object ClickedLabel: TLabel
         Left = 115
         Top = 44
-        Width = 24
+        Width = 8
         Height = 16
-        Caption = '120'
+        Caption = '0'
         Color = clRed
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
@@ -195,9 +200,9 @@ object Form1: TForm1
       object TimeLeftLabel: TLabel
         Left = 115
         Top = 66
-        Width = 16
+        Width = 8
         Height = 16
-        Caption = '80'
+        Caption = '0'
         Color = clRed
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
@@ -209,7 +214,7 @@ object Form1: TForm1
       end
     end
   end
-  object HelpButton: TBitBtn
+  object HelpForm: TBitBtn
     Left = 162
     Top = 231
     Width = 39
@@ -292,6 +297,7 @@ object Form1: TForm1
       EFE3C1EFE1C0EEDFC4F5ECDEFDFBFBFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFF}
     TabOrder = 3
+    OnClick = HelpFormClick
   end
   object RadioGroup1: TRadioGroup
     Left = 8
@@ -342,7 +348,26 @@ object Form1: TForm1
     Top = 24
     Width = 177
     Height = 132
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     ReadOnly = True
     TabOrder = 9
+  end
+  object SystemTimer: TTimer
+    Enabled = False
+    OnTimer = SystemTimerTimer
+    Left = 40
+    Top = 32
+  end
+  object TimeTimer: TTimer
+    Enabled = False
+    Interval = 60000
+    OnTimer = TimeTimerTimer
+    Left = 104
+    Top = 32
   end
 end

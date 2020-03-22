@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Randomize Screen Clicker'
+  Caption = 'Randomize Mouse Clicker'
   ClientHeight = 272
   ClientWidth = 408
   Color = clBtnFace

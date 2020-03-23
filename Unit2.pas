@@ -8,12 +8,9 @@ uses
 
 type
   TForm2 = class(TForm)
-    Image1: TImage;
-    Image2: TImage;
     Label1: TLabel;
-    Label2: TLabel;
     Button1: TButton;
-    Label3: TLabel;
+    Memo1: TMemo;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

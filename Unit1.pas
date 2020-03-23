@@ -68,7 +68,7 @@ begin
   //Устанавливаем триггер в дефолт
   TriggerLeft := false;
   //Обнуляем показатели
-  Form1.WorkTimeLabel.Caption := '0';
+  Form1.WorkTimeLabel.Caption := '0 мин.';
   Form1.ClickedLabel.Caption := '0';
   Form1.TimeLeftLabel.Caption := '0';
   //  Обвязка логики кнопок управления
@@ -82,7 +82,7 @@ begin
   Form1.SystemTimer.Interval := StrToInt(Form1.IntervalEdit.Text) * 1000;
   Form1.SystemTimer.Enabled := true;
   //Записываем оставшееся время
-  Form1.TimeLeftLabel.Caption := Form1.TimeEdit.Text;
+  Form1.TimeLeftLabel.Caption := Form1.TimeEdit.Text + ' мин.';
 end;
 
 procedure TForm1.StopButtonClick(Sender: TObject);
@@ -92,8 +92,9 @@ begin
   Form1.StopButton.Enabled := false;
   // Добавляем запись в лог
   Form1.LogMemo.Lines.Add(DateTimeToStr(now) + ' Остановка');
-  // Останавливаем таймер
+  // Останавливаем таймеры
   Form1.SystemTimer.Enabled := false;
+  Form1.TimeTimer.Enabled := false;
 end;
 
 procedure TForm1.SystemTimerTimer(Sender: TObject);
@@ -149,13 +150,14 @@ end;
 procedure TForm1.TimeTimerTimer(Sender: TObject);
 begin
   WorkingTime := WorkingTime + 1; //Считаем минуты
-  Form1.WorkTimeLabel.Caption := IntToStr(WorkingTime);  // Пишем время работы
+  Form1.WorkTimeLabel.Caption := IntToStr(WorkingTime) + ' мин.';  // Пишем время работы
   //Считаем оставшееся время работы
-  Form1.TimeLeftLabel.Caption := IntToStr(StrToInt(Form1.TimeEdit.Text) - WorkingTime);
+  Form1.TimeLeftLabel.Caption := IntToStr(StrToInt(Form1.TimeEdit.Text) - WorkingTime) + ' мин.';
   //При срабатываении останавливаем системный таймер
   if WorkingTime = StrToInt(Form1.TimeEdit.Text) then
     begin
       Form1.SystemTimer.Enabled := false;
+      Form1.TimeTimer.Enabled := false;
       // Добавляем запись в лог
       Form1.LogMemo.Lines.Add(DateTimeToStr(now) + ' Остановка');
       Form1.StopButton.Enabled := false;

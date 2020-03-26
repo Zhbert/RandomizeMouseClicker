@@ -198,7 +198,7 @@ object Form1: TForm1
       Height = 21
       NumbersOnly = True
       TabOrder = 0
-      Text = '10'
+      Text = '90'
     end
     object RadioGroup2: TRadioGroup
       Left = 95
